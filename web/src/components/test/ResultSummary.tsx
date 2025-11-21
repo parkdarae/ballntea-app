@@ -86,30 +86,6 @@ export const ResultSummary = ({
         ))}
       </section>
 
-      <section className="grid gap-4 md:grid-cols-2">
-        {result.axes.map((axis) => (
-          <AxisCard key={axis.axis} axis={axis} />
-        ))}
-      </section>
-
-      <section className="grid gap-4 md:grid-cols-3">
-        <QuickBadge
-          label="외향/내향"
-          value={result.energyProfile.orientation}
-          detail={`외향 ${result.energyProfile.raw.orientation["외향"]} vs 내향 ${result.energyProfile.raw.orientation["내향"]}`}
-        />
-        <QuickBadge
-          label="활동/정적"
-          value={result.energyProfile.activity}
-          detail={`활동 ${result.energyProfile.raw.activity["활동형"]} · 정적 ${result.energyProfile.raw.activity["정적형"]}`}
-        />
-        <QuickBadge
-          label="센터"
-          value={result.energyProfile.center === "Head" ? "사고중심" : result.energyProfile.center === "Heart" ? "감성중심" : "본능중심"}
-          detail={`사고 ${result.energyProfile.raw.center.Head} · 감성 ${result.energyProfile.raw.center.Heart} · 본능 ${result.energyProfile.raw.center.Gut}`}
-        />
-      </section>
-
       <section className="space-y-4">
         <div>
           <h3 className="text-sm uppercase tracking-[0.4em] text-slate">
@@ -144,6 +120,30 @@ export const ResultSummary = ({
             traits={centerDesc.traits}
           />
         )}
+      </section>
+
+      <section className="grid gap-4 md:grid-cols-2">
+        {result.axes.map((axis) => (
+          <AxisCard key={axis.axis} axis={axis} />
+        ))}
+      </section>
+
+      <section className="grid gap-4 md:grid-cols-3">
+        <QuickBadge
+          label="외향/내향"
+          value={result.energyProfile.orientation}
+          detail={`외향 ${result.energyProfile.raw.orientation["외향"]} vs 내향 ${result.energyProfile.raw.orientation["내향"]}`}
+        />
+        <QuickBadge
+          label="활동/정적"
+          value={result.energyProfile.activity}
+          detail={`활동 ${result.energyProfile.raw.activity["활동형"]} · 정적 ${result.energyProfile.raw.activity["정적형"]}`}
+        />
+        <QuickBadge
+          label="센터"
+          value={result.energyProfile.center === "Head" ? "사고중심" : result.energyProfile.center === "Heart" ? "감성중심" : "본능중심"}
+          detail={`사고 ${result.energyProfile.raw.center.Head} · 감성 ${result.energyProfile.raw.center.Heart} · 본능 ${result.energyProfile.raw.center.Gut}`}
+        />
       </section>
 
       <section className="rounded-3xl bg-ink px-6 py-5 text-white">
