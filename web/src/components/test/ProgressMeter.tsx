@@ -56,28 +56,28 @@ export const ProgressMeter = ({
   });
 
   return (
-    <section className="retro-card flex flex-col gap-4 p-6">
+    <section className="retro-card flex flex-col gap-2.5 p-2.5 md:gap-4 md:p-6">
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-xs uppercase tracking-[0.4em] text-slate">
+          <p className="text-xs uppercase tracking-[0.2em] text-slate md:tracking-[0.3em]">
             진행률
           </p>
-          <p className="text-4xl font-bold text-ink">
+          <p className="text-3xl font-bold text-ink md:text-4xl">
             {percent}
-            <span className="text-lg font-medium text-slate">%</span>
+            <span className="text-base font-medium text-slate md:text-lg">%</span>
           </p>
         </div>
-        <span className="rounded-full bg-pop px-4 py-2 text-sm font-semibold text-white">
+        <span className="rounded-full bg-pop px-3 py-1.5 text-xs font-semibold text-white md:px-4 md:py-2 md:text-sm">
           {currentIndex + 1} / {total}
         </span>
       </div>
-      <div className="h-3 w-full rounded-full bg-stone/60">
+      <div className="h-2.5 w-full rounded-full bg-stone/60 md:h-3">
         <div
           className="h-full rounded-full bg-ink transition-all"
           style={{ width: `${percent}%` }}
         />
       </div>
-      <div className="grid gap-2 sm:grid-cols-3">
+      <div className="grid gap-1.5 sm:grid-cols-3 md:gap-2">
         {categoryProgress.map((section) => (
           <ProgressPill
             key={section.label}
@@ -91,12 +91,12 @@ export const ProgressMeter = ({
 };
 
 const ProgressPill = ({ label, value }: { label: string; value: number }) => (
-  <div className="rounded-3xl border border-slate/20 px-4 py-3">
-    <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.2em] text-slate">
+  <div className="rounded-xl border border-slate/20 px-2.5 py-2 md:rounded-3xl md:px-4 md:py-3">
+    <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.1em] text-slate md:tracking-[0.2em]">
       <span>{label}</span>
       <span>{value}%</span>
     </div>
-    <div className="mt-2 h-2 rounded-full bg-stone">
+    <div className="mt-1.5 h-1.5 rounded-full bg-stone md:mt-2 md:h-2">
       <div
         className="h-full rounded-full bg-pop transition-all"
         style={{ width: `${value}%` }}

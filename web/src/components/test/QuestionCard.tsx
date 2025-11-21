@@ -7,7 +7,7 @@ interface QuestionCardProps {
 }
 
 const choiceStyles =
-  "rounded-3xl border-2 border-transparent px-4 py-4 text-left transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-mint/40 md:px-6 md:py-5";
+  "rounded-xl border-2 border-transparent px-2.5 py-2.5 text-left transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-mint/40 md:rounded-3xl md:px-6 md:py-5";
 
 const inactiveStyles =
   "bg-white/70 border-white hover:border-mint/30 hover:bg-white";
@@ -20,17 +20,17 @@ export const QuestionCard = ({
   onSelect,
 }: QuestionCardProps) => {
   return (
-    <section className="retro-card flex flex-col gap-5 p-4 md:p-6">
+    <section className="retro-card flex flex-col gap-3 p-2.5 md:gap-5 md:p-6">
       <header>
-        <p className="text-xs uppercase tracking-[0.3em] text-slate md:text-sm">
+        <p className="text-xs uppercase tracking-[0.2em] text-slate md:text-sm md:tracking-[0.3em]">
           {question.category}
         </p>
-        <h2 className="mt-1 text-xl font-semibold leading-snug text-ink md:text-2xl">
+        <h2 className="mt-0.5 text-lg font-semibold leading-snug text-ink md:mt-1 md:text-2xl">
           {question.id}. {question.question}
         </h2>
       </header>
 
-      <div className="grid gap-4">
+      <div className="grid gap-2.5 md:gap-4">
         <button
           type="button"
           className={`${choiceStyles} ${
@@ -38,10 +38,10 @@ export const QuestionCard = ({
           }`}
           onClick={() => onSelect("A")}
         >
-          <p className={`text-sm font-bold ${selected === "A" ? "text-lemon" : "text-pop"}`}>
+          <p className={`text-xs font-bold md:text-sm ${selected === "A" ? "text-lemon" : "text-pop"}`}>
             A
           </p>
-          <p className={`mt-1 text-base leading-relaxed ${selected === "A" ? "text-white" : "text-ink/90"} md:text-base`}>
+          <p className={`mt-0.5 text-sm leading-relaxed md:mt-1 md:text-base ${selected === "A" ? "text-white" : "text-ink/90"}`}>
             {question.optionA.text}
           </p>
         </button>
@@ -53,10 +53,10 @@ export const QuestionCard = ({
           }`}
           onClick={() => onSelect("B")}
         >
-          <p className={`text-sm font-bold ${selected === "B" ? "text-lemon" : "text-pop"}`}>
+          <p className={`text-xs font-bold md:text-sm ${selected === "B" ? "text-lemon" : "text-pop"}`}>
             B
           </p>
-          <p className={`mt-1 text-base leading-relaxed ${selected === "B" ? "text-white" : "text-ink/90"} md:text-base`}>
+          <p className={`mt-0.5 text-sm leading-relaxed md:mt-1 md:text-base ${selected === "B" ? "text-white" : "text-ink/90"}`}>
             {question.optionB.text}
           </p>
         </button>
