@@ -7,7 +7,7 @@ interface QuestionCardProps {
 }
 
 const choiceStyles =
-  "rounded-3xl border-2 border-transparent px-6 py-5 text-left transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-mint/40";
+  "rounded-3xl border-2 border-transparent px-4 py-4 text-left transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-mint/40 md:px-6 md:py-5";
 
 const inactiveStyles =
   "bg-white/70 border-white hover:border-mint/30 hover:bg-white";
@@ -20,17 +20,17 @@ export const QuestionCard = ({
   onSelect,
 }: QuestionCardProps) => {
   return (
-    <section className="retro-card flex flex-col gap-5 p-6">
+    <section className="retro-card flex flex-col gap-5 p-4 md:p-6">
       <header className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <p className="text-sm uppercase tracking-[0.3em] text-slate">
+          <p className="text-xs uppercase tracking-[0.3em] text-slate md:text-sm">
             {question.category}
           </p>
-          <h2 className="text-2xl font-semibold text-ink">
+          <h2 className="text-xl font-semibold leading-snug text-ink md:text-2xl">
             {question.id}. {question.question}
           </h2>
         </div>
-        <div className="rounded-full bg-lemon/30 px-5 py-2 text-sm font-semibold text-ink shadow-[0_8px_20px_rgba(241,95,75,0.25)]">
+        <div className="rounded-full bg-lemon/30 px-4 py-1.5 text-xs font-semibold text-ink shadow-[0_8px_20px_rgba(241,95,75,0.25)] md:px-5 md:py-2 md:text-sm">
           {question.axis}
         </div>
       </header>
@@ -46,7 +46,7 @@ export const QuestionCard = ({
           <p className={`text-sm font-bold ${selected === "A" ? "text-lemon" : "text-pop"}`}>
             A
           </p>
-          <p className={`text-base ${selected === "A" ? "text-white" : "text-ink/90"}`}>
+          <p className={`mt-1 text-base leading-relaxed ${selected === "A" ? "text-white" : "text-ink/90"} md:text-base`}>
             {question.optionA.text}
           </p>
         </button>
@@ -61,7 +61,7 @@ export const QuestionCard = ({
           <p className={`text-sm font-bold ${selected === "B" ? "text-lemon" : "text-pop"}`}>
             B
           </p>
-          <p className={`text-base ${selected === "B" ? "text-white" : "text-ink/90"}`}>
+          <p className={`mt-1 text-base leading-relaxed ${selected === "B" ? "text-white" : "text-ink/90"} md:text-base`}>
             {question.optionB.text}
           </p>
         </button>
