@@ -31,7 +31,7 @@ export const CENTER_DESCRIPTIONS: Record<string, {
   description: string;
   traits: string[];
 }> = {
-  "Head": {
+  "사고중심": {
     label: "사고 중심",
     subtitle: "논리와 분석의 중심",
     description: "복잡한 것이 명확한 구조로 정리되는 순간, 당신은 점화돼요. 생각이 선명해질 때 판단력이 가장 날카로워져요.",
@@ -43,7 +43,7 @@ export const CENTER_DESCRIPTIONS: Record<string, {
       "명확하게 이해하고 납득해야 행동해요.",
     ],
   },
-  "Heart": {
+  "감성중심": {
     label: "감성 중심",
     subtitle: "감정과 공감의 중심",
     description: "마음이 울림을 느끼는 순간, 당신은 깊어져요. 감정의 흐름을 읽고 공감할 때 연결력이 가장 강력해져요.",
@@ -55,7 +55,7 @@ export const CENTER_DESCRIPTIONS: Record<string, {
       "마음이 움직여야 진정한 동기가 생겨요.",
     ],
   },
-  "Gut": {
+  "본능중심": {
     label: "본능 중심",
     subtitle: "본능과 직감의 중심",
     description: "직감이 '이거다' 하고 말하는 순간, 당신은 폭발해요. 생각보다 본능이 먼저 움직일 때 행동력이 가장 빨라요.",

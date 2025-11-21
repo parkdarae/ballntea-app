@@ -137,12 +137,12 @@ const toCenterLabel = (scoreMap: Record<string, number>): CenterLabel => {
   const head = scoreMap["Head"] ?? 0;
   const heart = scoreMap["Heart"] ?? 0;
   const gut = scoreMap["Gut"] ?? 0;
-  if (head === heart && head === gut) return "Head";
+  if (head === heart && head === gut) return "사고중심";
   const max = Math.max(head, heart, gut);
-  if (max === head) return "Head";
-  if (max === heart) return "Heart";
-  if (max === gut) return "Gut";
-  return "Head";
+  if (max === head) return "사고중심";
+  if (max === heart) return "감성중심";
+  if (max === gut) return "본능중심";
+  return "사고중심";
 };
 
 const toTimeLabel = (scoreMap: Record<string, number>): TimeLabel => {

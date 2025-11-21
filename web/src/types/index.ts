@@ -51,7 +51,7 @@ export interface AxisBreakdown {
 
 export type OrientationLabel = "외향" | "내향";
 export type ActivityLabel = "활동형" | "정적형";
-export type CenterLabel = "Head" | "Heart" | "Gut";
+export type CenterLabel = "사고중심" | "감성중심" | "본능중심";
 export type TimeLabel = "아침형" | "저녁형";
 
 export interface EnergyProfile {
