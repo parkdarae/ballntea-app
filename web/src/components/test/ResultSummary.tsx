@@ -21,12 +21,12 @@ export const ResultSummary = ({
   const justForToday = MBTI_JUST_FOR_TODAY[result.mbtiType];
 
   return (
-    <section className="retro-card flex flex-col gap-6 p-3 md:gap-8 md:p-6">
-      <div className="mb-2 text-center md:mb-4">
+    <section className="retro-card flex flex-col gap-5 p-2 md:gap-8 md:p-6">
+      <div className="mb-1 text-center md:mb-4">
         <h1 className="text-4xl font-bold tracking-tight text-ink md:text-5xl lg:text-6xl">
           Ball<span className="text-pop">&</span>Tea
         </h1>
-        <p className="mt-1 text-xs uppercase tracking-[0.5em] text-lemon md:text-sm md:tracking-[0.6em]">
+        <p className="mt-1 text-xs uppercase tracking-[0.4em] text-lemon md:text-sm md:tracking-[0.6em]">
           TEST
         </p>
       </div>
@@ -50,16 +50,16 @@ export const ResultSummary = ({
       </header>
 
       {mbtiDesc && (
-        <section className="rounded-2xl border border-pop/20 bg-gradient-to-br from-lemon/10 to-mint/10 p-3 md:rounded-3xl md:p-5">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-full bg-pop px-2.5 py-0.5 text-xs font-bold uppercase tracking-[0.15em] text-white md:px-3 md:py-1 md:text-sm">
+        <section className="rounded-xl border border-pop/20 bg-gradient-to-br from-lemon/10 to-mint/10 p-2.5 md:rounded-3xl md:p-5">
+          <div className="flex flex-wrap items-center gap-1.5">
+            <span className="rounded-full bg-pop px-2 py-0.5 text-xs font-bold uppercase tracking-[0.1em] text-white md:px-3 md:py-1 md:text-sm">
               {result.mbtiType}
             </span>
             <h3 className="text-base font-bold text-ink md:text-lg">{mbtiDesc.title}</h3>
           </div>
-          <ul className="mt-2.5 space-y-1 text-sm leading-relaxed text-ink md:mt-3 md:space-y-1.5 md:text-base">
+          <ul className="mt-2 space-y-0.5 text-sm leading-relaxed text-ink md:mt-3 md:space-y-1.5 md:text-base">
             {mbtiDesc.traits.map((trait, index) => (
-              <li key={index} className="flex gap-2">
+              <li key={index} className="flex gap-1.5">
                 <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-pop" />
                 <span>{trait}</span>
               </li>
@@ -86,17 +86,17 @@ export const ResultSummary = ({
         ))}
       </section>
 
-      <section className="space-y-2.5 md:space-y-3">
+      <section className="space-y-2 md:space-y-3">
         <div>
-          <h3 className="text-xs uppercase tracking-[0.25em] text-slate md:text-sm md:tracking-[0.3em]">
+          <h3 className="text-xs uppercase tracking-[0.2em] text-slate md:text-sm md:tracking-[0.3em]">
             🌈 에너지 방향성
           </h3>
-          <p className="mt-1.5 text-sm leading-relaxed text-ink md:text-base">
+          <p className="mt-1 text-sm leading-relaxed text-ink md:text-base">
             당신의 에너지 흐름에 맞춘 볼앤티 한 잔이 하루의 리듬을 정확하게 세팅해 줘요. 
             지금 필요한 집중, 안정, 활력을 티 한 모금으로 깨워보세요.
           </p>
         </div>
-        <div className="grid gap-2.5 md:grid-cols-2 md:gap-3">
+        <div className="grid gap-2 md:grid-cols-2 md:gap-3">
           {orientationDesc && (
             <EnergyCard
               label={orientationDesc.label}
@@ -122,11 +122,11 @@ export const ResultSummary = ({
         )}
       </section>
 
-      <section className="rounded-2xl bg-ink px-3 py-3 text-white md:rounded-3xl md:px-5 md:py-4">
-        <p className="text-xs uppercase tracking-[0.25em] text-lemon md:text-sm md:tracking-[0.3em]">
+      <section className="rounded-xl bg-ink px-2.5 py-2.5 text-white md:rounded-3xl md:px-5 md:py-4">
+        <p className="text-xs uppercase tracking-[0.2em] text-lemon md:text-sm md:tracking-[0.3em]">
           Just for Today
         </p>
-        <p className="mt-1.5 text-sm leading-relaxed md:text-base">
+        <p className="mt-1 text-sm leading-relaxed md:text-base">
           {justForToday || `오늘은 ${result.timePreference.label} 루틴에 맞춰 ${result.energyProfile.center} 센터 감각을 활성화하세요.`}
         </p>
       </section>
@@ -145,20 +145,20 @@ const EnergyCard = ({
   description: string;
   traits?: string[];
 }) => (
-  <div className="rounded-2xl border border-mint/30 bg-gradient-to-br from-mint/5 to-lemon/5 p-3 md:rounded-3xl md:p-4">
-    <div className="flex items-center gap-1.5 md:gap-2">
-      <span className="text-lg md:text-xl">🌈</span>
+  <div className="rounded-xl border border-mint/30 bg-gradient-to-br from-mint/5 to-lemon/5 p-2.5 md:rounded-3xl md:p-4">
+    <div className="flex items-center gap-1 md:gap-2">
+      <span className="text-base md:text-lg">🌈</span>
       <div>
         <p className="text-sm font-bold text-ink">{label}</p>
-        <p className="text-xs uppercase tracking-[0.1em] text-slate md:tracking-[0.15em]">{subtitle}</p>
+        <p className="text-xs uppercase tracking-[0.05em] text-slate md:tracking-[0.1em]">{subtitle}</p>
       </div>
     </div>
-    <p className="mt-2 text-sm leading-relaxed text-ink">{description}</p>
+    <p className="mt-1.5 text-sm leading-relaxed text-ink">{description}</p>
     {traits && traits.length > 0 && (
-      <ul className="mt-2 space-y-0.5 text-xs text-ink md:space-y-1">
+      <ul className="mt-1.5 space-y-0.5 text-xs text-ink">
         {traits.map((trait, index) => (
-          <li key={index} className="flex gap-1.5">
-            <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-mint" />
+          <li key={index} className="flex gap-1">
+            <span className="mt-1.5 h-0.5 w-0.5 flex-shrink-0 rounded-full bg-mint" />
             <span>{trait}</span>
           </li>
         ))}
@@ -177,23 +177,23 @@ const TeaCard = ({
   highlight: string;
 }) => {
   return (
-    <article className="flex flex-col gap-2 rounded-2xl border border-slate/15 bg-white/90 p-3 shadow-[0_12px_30px_rgba(27,43,82,0.08)] md:rounded-3xl md:p-4">
-      <span className="w-fit rounded-full bg-lemon/40 px-2 py-0.5 text-xs font-semibold uppercase tracking-[0.15em] text-ink md:px-2.5 md:tracking-[0.2em]">
+    <article className="flex flex-col gap-1.5 rounded-xl border border-slate/15 bg-white/90 p-2.5 shadow-[0_12px_30px_rgba(27,43,82,0.08)] md:rounded-3xl md:p-4">
+      <span className="w-fit rounded-full bg-lemon/40 px-1.5 py-0.5 text-xs font-semibold uppercase tracking-[0.1em] text-ink md:px-2.5 md:tracking-[0.15em]">
         {badge}
       </span>
       <div>
         <p className="text-xs font-semibold text-slate">{highlight}</p>
-        <h3 className="text-lg font-bold text-ink md:text-xl">{tea.name}</h3>
+        <h3 className="text-base font-bold text-ink md:text-lg">{tea.name}</h3>
         <p className="text-xs leading-relaxed text-slate">
           {tea.copy} · 카페인 {tea.caffeine ?? "정보 없음"}
         </p>
       </div>
       {tea.tasteNote && (
-        <div className="flex flex-wrap gap-1 text-xs font-semibold text-slate md:gap-1.5">
+        <div className="flex flex-wrap gap-1 text-xs font-semibold text-slate">
           {tea.tasteNote.map((note) => (
             <span
               key={note}
-              className="rounded-full bg-stone/70 px-2 py-0.5 text-ink"
+              className="rounded-full bg-stone/70 px-1.5 py-0.5 text-ink"
             >
               #{note}
             </span>
