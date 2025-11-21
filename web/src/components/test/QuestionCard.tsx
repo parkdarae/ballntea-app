@@ -21,18 +21,13 @@ export const QuestionCard = ({
 }: QuestionCardProps) => {
   return (
     <section className="retro-card flex flex-col gap-5 p-4 md:p-6">
-      <header className="flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-slate md:text-sm">
-            {question.category}
-          </p>
-          <h2 className="text-xl font-semibold leading-snug text-ink md:text-2xl">
-            {question.id}. {question.question}
-          </h2>
-        </div>
-        <div className="rounded-full bg-lemon/30 px-4 py-1.5 text-xs font-semibold text-ink shadow-[0_8px_20px_rgba(241,95,75,0.25)] md:px-5 md:py-2 md:text-sm">
-          {question.axis}
-        </div>
+      <header>
+        <p className="text-xs uppercase tracking-[0.3em] text-slate md:text-sm">
+          {question.category}
+        </p>
+        <h2 className="mt-1 text-xl font-semibold leading-snug text-ink md:text-2xl">
+          {question.id}. {question.question}
+        </h2>
       </header>
 
       <div className="grid gap-4">
