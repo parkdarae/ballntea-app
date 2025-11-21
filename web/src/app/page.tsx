@@ -15,49 +15,75 @@ const heroStats = [
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-5xl px-4 pb-24 pt-12 md:px-6">
-      <section className="rounded-[48px] bg-ink px-6 py-10 text-white shadow-[0_30px_80px_rgba(27,43,82,0.45)] md:px-12 md:py-14">
-        <p className="text-xs uppercase tracking-[0.5em] text-lemon md:text-sm">
-          Ball&Tea Retro Pop Lab
-        </p>
-        <h1 className="mt-4 text-3xl font-bold leading-tight md:text-5xl lg:text-6xl">
-          MBTI + 에너지 매칭 테스트로
-          <br />
-          하루의 102% 에너지를 세팅하세요.
-        </h1>
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/90 md:text-lg">
-          13문항 A/B 테스트로 MBTI 4축 · 활동/정적 · Center(Head/Heart/Gut) ·
-          아침/저녁 루틴을 한 번에 파악하고, 바로 실천 가능한 티 루틴을
-          추천합니다.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-3 md:gap-4">
+    <main className="mx-auto max-w-4xl px-4 pb-24 pt-8 md:px-6 md:pt-12">
+      <section className="rounded-[48px] bg-ink px-6 py-12 text-white shadow-[0_30px_80px_rgba(27,43,82,0.45)] md:px-12 md:py-16">
+        <div className="text-center">
+          <p className="text-xs uppercase tracking-[0.5em] text-lemon/80 md:text-sm">
+            Ball&Tea Retro Pop Lab
+          </p>
+          <h1 className="mt-3 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+            Ball<span className="text-lemon">n</span>TEA TEST
+          </h1>
+        </div>
+
+        <div className="mt-10 text-center md:mt-12">
+          <h2 className="text-2xl font-bold leading-snug text-white md:text-3xl lg:text-4xl">
+            오늘의 에너지, 어떤 맛일까?
+          </h2>
+          <div className="mt-6 space-y-1.5 text-base leading-relaxed text-white/90 md:text-lg">
+            <p className="font-semibold">13문항으로 알아보는</p>
+            <p>MBTI 기질 × 감정 흐름 × 내면의 리듬</p>
+            <p className="text-sm text-white/70 md:text-base">
+              오늘 하루를 잘 쓰기 위한 가장 쉬운 체크인.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-10 rounded-3xl bg-white/5 px-6 py-8 backdrop-blur-sm md:mt-12 md:px-8">
+          <p className="text-center text-base leading-relaxed text-white/90 md:text-lg">
+            오늘 필요한 건
+          </p>
+          <div className="mt-4 space-y-2 text-center text-lg font-medium md:text-xl">
+            <p>🔥 불타오르는 집중인지</p>
+            <p>🌿 잔잔한 회복인지</p>
+            <p>☕ 리셋인지</p>
+          </div>
+          <p className="mt-4 text-center text-sm text-white/70 md:text-base">
+            한 번에 체크해드릴게요.
+          </p>
+        </div>
+
+        <div className="mt-8 text-center md:mt-10">
+          <p className="text-base font-semibold leading-relaxed text-white md:text-lg">
+            딱 13개의 선택으로
+            <br />
+            오늘 필요한 감정과 에너지의 방향을 잡아드립니다!
+          </p>
+        </div>
+
+        <div className="mt-8 flex flex-col items-center gap-3 md:mt-10">
           <Link
             href="/test"
-            className="rounded-full bg-lemon px-7 py-3.5 text-base font-bold text-ink transition hover:translate-y-0.5 hover:opacity-90 md:px-8 md:py-4 md:text-lg"
+            className="w-full max-w-md rounded-full bg-gradient-to-r from-lemon to-mint px-8 py-4 text-center text-lg font-bold text-ink shadow-lg transition hover:scale-105 hover:shadow-xl md:text-xl"
           >
-            테스트 시작하기
+            ✨ 지금 바로, 내 에너지 확인하기
           </Link>
           <Link
             href="/recommend"
-            className="rounded-full border-2 border-white/60 px-7 py-3.5 text-base font-bold text-white transition hover:bg-white hover:text-ink md:px-8 md:py-4 md:text-lg"
+            className="text-sm text-white/60 underline decoration-white/30 underline-offset-4 transition hover:text-white/90 md:text-base"
           >
-            맞춤 추천 보기
+            맞춤 추천 먼저 보기
           </Link>
-          <a
-            href="/docs/ballntea_requirements.md"
-            className="rounded-full border-2 border-white/60 px-7 py-3.5 text-base font-bold text-white transition hover:bg-white hover:text-ink md:px-8 md:py-4 md:text-lg"
-          >
-            요구사항 전문
-          </a>
         </div>
-        <div className="mt-10 grid gap-3 text-sm uppercase tracking-[0.2em] md:grid-cols-3 md:gap-4">
+
+        <div className="mt-10 grid gap-3 text-center text-sm md:mt-12 md:grid-cols-3">
           {heroStats.map((stat) => (
-            <div key={stat.label} className="rounded-3xl bg-white/10 px-5 py-4 md:px-6">
-              <p className="text-xs text-lemon md:text-sm">{stat.label}</p>
-              <p className="text-2xl font-bold tracking-tight text-white md:text-3xl">
+            <div key={stat.label} className="rounded-2xl bg-white/5 px-4 py-3 backdrop-blur-sm">
+              <p className="text-xs text-lemon/80">{stat.label}</p>
+              <p className="mt-1 text-xl font-bold text-white md:text-2xl">
                 {stat.value}
               </p>
-              <p className="text-xs text-white/70">{stat.sub}</p>
+              <p className="mt-0.5 text-xs text-white/50">{stat.sub}</p>
             </div>
           ))}
         </div>
