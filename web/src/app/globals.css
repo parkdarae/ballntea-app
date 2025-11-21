@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --background: #f8f3e8;
+  --foreground: #1b2b52;
+}
+
+@theme inline {
+  --color-cream: #f8f3e8;
+  --color-ink: #1b2b52;
+  --color-pop: #f15f4b;
+  --color-lemon: #f8ce3a;
+  --color-mint: #34d2c3;
+  --color-stone: #ede5d4;
+  --color-slate: #4f5d8c;
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --radius-pill: 999px;
+  --radius-card: 32px;
+}
+
+body {
+  font-family: var(--font-body), "Pretendard Variable", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.retro-card {
+  border-radius: var(--radius-card);
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(27, 43, 82, 0.12);
+}
+
+.noise-layer {
+  background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0)
+    ),
+    radial-gradient(
+      circle at top,
+      rgba(27, 43, 82, 0.08),
+      transparent 45%
+    );
+}

@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+web/node_modules/
+
+# Build outputs
+web/.next/
+web/out/
+web/dist/
+
+# Environment files
+.env
+.env.local
+.env*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Vercel
+.vercel
+
+# Snapshots
+.snapshots/
+
+# Large PDF files
+*.pdf
+

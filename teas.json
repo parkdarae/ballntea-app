@@ -1,0 +1,288 @@
+[
+  {
+    "teaId": "BT001",
+    "name": "얼그레이 홍차",
+    "nameEn": "Earl Grey Black Tea",
+    "timeTag": ["Morning"],
+    "energyTag": ["Head", "아침형", "활동형"],
+    "mbtiMatch": ["ENTJ", "INTJ", "ESTJ"],
+    "tasteNote": ["시트러스", "버가못", "홍차"],
+    "caffeine": "높음",
+    "copy": "날카롭고 선명한 사고를 깨우는 리더의 향.",
+    "description": "전략가의 뇌를 깔끔하게 정렬해주는 아침의 시작.",
+    "brewingGuide": {
+      "teaBag": "1개",
+      "water": "300ml 이상",
+      "time": "3분",
+      "temp": "90°C"
+    },
+    "assets": ["assets/images/BT001-morning-signature.png"]
+  },
+  {
+    "teaId": "BT002",
+    "name": "그린 포레스트",
+    "nameEn": "Green Forest",
+    "timeTag": ["Morning", "Afternoon"],
+    "energyTag": ["활동형", "아침형"],
+    "mbtiMatch": ["ENFP", "ENTP", "ESTP"],
+    "tasteNote": ["초록", "집중력", "상쾌"],
+    "caffeine": "중간",
+    "copy": "전원을 켜듯 바로 몰입 단계로 진입하는 집중의 초록.",
+    "description": "초록의 날카로운 집중력으로 바로 기동되는 한 모금.",
+    "brewingGuide": {
+      "teaBag": "1개",
+      "water": "300ml 이상",
+      "time": "3분",
+      "temp": "80°C"
+    },
+    "assets": ["assets/images/BT002-green-forest.png"]
+  },
+  {
+    "teaId": "BT003",
+    "name": "캐모마일",
+    "nameEn": "Chamomile",
+    "timeTag": ["Evening"],
+    "energyTag": ["정적형", "저녁형", "Heart"],
+    "mbtiMatch": ["INFP", "ISFP", "INFJ"],
+    "tasteNote": ["꽃향기", "편안함", "안정"],
+    "caffeine": "없음",
+    "copy": "과열된 사고를 부드럽게 식혀주는 안정된 저녁.",
+    "description": "오늘 하루를 부드럽게 마무리하는 릴렉스 타임.",
+    "brewingGuide": {
+      "teaBag": "1개",
+      "water": "300ml 이상",
+      "time": "5분",
+      "temp": "90°C"
+    },
+    "assets": ["assets/images/BT003-chamomile.png"]
+  },
+  {
+    "teaId": "BT004",
+    "name": "레몬밤",
+    "nameEn": "Lemon Balm",
+    "timeTag": ["Evening"],
+    "energyTag": ["정적형", "저녁형"],
+    "mbtiMatch": ["ISFJ", "ISTJ"],
+    "tasteNote": ["레몬", "허브", "편안함"],
+    "caffeine": "없음",
+    "copy": "과한 텐션을 가볍게 내리는 부드러운 릴렉스.",
+    "description": "하루의 긴장을 풀어주는 부드러운 저녁 티.",
+    "brewingGuide": {
+      "teaBag": "1개",
+      "water": "300ml 이상",
+      "time": "5분",
+      "temp": "85°C"
+    },
+    "assets": ["assets/images/BT004-lemon-balm.png"]
+  },
+  {
+    "teaId": "BT005",
+    "name": "페퍼민트",
+    "nameEn": "Peppermint",
+    "timeTag": ["Morning", "Afternoon"],
+    "energyTag": ["활동형", "외향"],
+    "mbtiMatch": ["ESFP", "ENFP"],
+    "tasteNote": ["민트", "상쾌함", "집중"],
+    "caffeine": "없음",
+    "copy": "상쾌한 민트 향의 페퍼민트 티 – 아침 10시, 나만의 102% 에너지 부스터!",
+    "description": "깔끔한 민트로 정신을 또렷하게 깨우는 티.",
+    "brewingGuide": {
+      "teaBag": "1개",
+      "water": "300ml 이상",
+      "time": "3분",
+      "temp": "90°C"
+    },
+    "assets": ["assets/images/BT005-peppermint.png"]
+  },
+  {
+    "teaId": "BT006",
+    "name": "루이보스",
+    "nameEn": "Rooibos",
+    "timeTag": ["Afternoon", "Evening"],
+    "energyTag": ["정적형", "밸런스"],
+    "mbtiMatch": ["ISFJ", "ESFJ"],
+    "tasteNote": ["달콤함", "부드러움", "안정"],
+    "caffeine": "없음",
+    "copy": "달콤하고 부드러운 루이보스로 오후를 채우다.",
+    "description": "카페인 없이 편안하게 즐기는 오후 티.",
+    "brewingGuide": {
+      "teaBag": "1개",
+      "water": "300ml 이상",
+      "time": "5분",
+      "temp": "90°C"
+    },
+    "assets": ["assets/images/BT006-rooibos.png"]
+  },
+  {
+    "teaId": "BT007",
+    "name": "자스민 티",
+    "nameEn": "Jasmine Tea",
+    "timeTag": ["Morning", "Afternoon"],
+    "energyTag": ["Heart", "외향"],
+    "mbtiMatch": ["ENFJ", "ESFJ"],
+    "tasteNote": ["꽃향기", "우아함", "집중"],
+    "caffeine": "중간",
+    "copy": "사고의 선명도를 확 끌어올리는 정제된 향.",
+    "description": "우아한 자스민 향으로 감성과 집중을 동시에.",
+    "brewingGuide": {
+      "teaBag": "1개",
+      "water": "300ml 이상",
+      "time": "3분",
+      "temp": "85°C"
+    },
+    "assets": ["assets/images/BT007-jasmine.png"]
+  },
+  {
+    "teaId": "BT008",
+    "name": "히비스커스",
+    "nameEn": "Hibiscus",
+    "timeTag": ["Afternoon"],
+    "energyTag": ["활동형", "외향"],
+    "mbtiMatch": ["ESFP", "ESTP"],
+    "tasteNote": ["새콤함", "상큼함", "비타민"],
+    "caffeine": "없음",
+    "copy": "새콤달콤한 히비스커스로 오후 에너지 충전.",
+    "description": "상큼한 산미로 활력을 더하는 오후 티.",
+    "brewingGuide": {
+      "teaBag": "1개",
+      "water": "300ml 이상",
+      "time": "5분",
+      "temp": "90°C"
+    },
+    "assets": ["assets/images/BT008-hibiscus.png"]
+  },
+  {
+    "teaId": "BT009",
+    "name": "생강차",
+    "nameEn": "Ginger Tea",
+    "timeTag": ["Morning"],
+    "energyTag": ["Gut", "활동형"],
+    "mbtiMatch": ["ESTP", "ISTP"],
+    "tasteNote": ["매콤함", "따뜻함", "활력"],
+    "caffeine": "없음",
+    "copy": "직감적으로 느껴지는 대로 바로 행동에 들어가는 에너지.",
+    "description": "몸을 따뜻하게 깨우는 아침의 활력 티.",
+    "brewingGuide": {
+      "teaBag": "1개",
+      "water": "300ml 이상",
+      "time": "5분",
+      "temp": "95°C"
+    },
+    "assets": ["assets/images/BT009-ginger.png"]
+  },
+  {
+    "teaId": "BT010",
+    "name": "녹차",
+    "nameEn": "Green Tea",
+    "timeTag": ["Morning", "Afternoon"],
+    "energyTag": ["Head", "활동형"],
+    "mbtiMatch": ["INTP", "INTJ"],
+    "tasteNote": ["깔끔함", "집중", "항산화"],
+    "caffeine": "중간",
+    "copy": "명확해지는 순간에서 오는 102% 집중력.",
+    "description": "깔끔한 녹차로 사고를 정리하는 시간.",
+    "brewingGuide": {
+      "teaBag": "1개",
+      "water": "300ml 이상",
+      "time": "2분",
+      "temp": "70°C"
+    },
+    "assets": ["assets/images/BT010-green-tea.png"]
+  },
+  {
+    "teaId": "BT011",
+    "name": "라벤더",
+    "nameEn": "Lavender",
+    "timeTag": ["Evening"],
+    "energyTag": ["Heart", "정적형"],
+    "mbtiMatch": ["INFP", "INFJ"],
+    "tasteNote": ["꽃향기", "진정", "릴렉스"],
+    "caffeine": "없음",
+    "copy": "감정을 살피며 타협점을 찾는 부드러운 저녁.",
+    "description": "라벤더 향으로 마음을 편안하게 정리하는 티.",
+    "brewingGuide": {
+      "teaBag": "1개",
+      "water": "300ml 이상",
+      "time": "5분",
+      "temp": "90°C"
+    },
+    "assets": ["assets/images/BT011-lavender.png"]
+  },
+  {
+    "teaId": "BT012",
+    "name": "로즈힙",
+    "nameEn": "Rosehip",
+    "timeTag": ["Afternoon"],
+    "energyTag": ["Heart", "외향"],
+    "mbtiMatch": ["ENFJ", "ESFJ"],
+    "tasteNote": ["새콤함", "비타민C", "상큼"],
+    "caffeine": "없음",
+    "copy": "따뜻하고 배려 깊은 사람이라는 평가를 받을 때 행복한 티.",
+    "description": "비타민이 풍부한 로즈힙으로 오후를 밝게.",
+    "brewingGuide": {
+      "teaBag": "1개",
+      "water": "300ml 이상",
+      "time": "5분",
+      "temp": "90°C"
+    },
+    "assets": ["assets/images/BT012-rosehip.png"]
+  },
+  {
+    "teaId": "BT013",
+    "name": "얼그레이 크림",
+    "nameEn": "Earl Grey Cream",
+    "timeTag": ["Afternoon"],
+    "energyTag": ["Head", "밸런스"],
+    "mbtiMatch": ["ENTJ", "ENFJ"],
+    "tasteNote": ["크림", "버가못", "부드러움"],
+    "caffeine": "중간",
+    "copy": "전략과 감성을 동시에 충족하는 오후의 티.",
+    "description": "크리미한 얼그레이로 오후를 우아하게.",
+    "brewingGuide": {
+      "teaBag": "1개",
+      "water": "300ml 이상",
+      "time": "3분",
+      "temp": "90°C"
+    },
+    "assets": ["assets/images/BT013-earl-grey-cream.png"]
+  },
+  {
+    "teaId": "BT014",
+    "name": "국화차",
+    "nameEn": "Chrysanthemum Tea",
+    "timeTag": ["Afternoon", "Evening"],
+    "energyTag": ["정적형", "내향"],
+    "mbtiMatch": ["ISFP", "ISTP"],
+    "tasteNote": ["은은함", "편안함", "꽃향기"],
+    "caffeine": "없음",
+    "copy": "혼자만의 시간을 보내며 마음의 안정을 찾는 티.",
+    "description": "은은한 국화 향으로 조용한 시간을 즐기다.",
+    "brewingGuide": {
+      "teaBag": "1개",
+      "water": "300ml 이상",
+      "time": "5분",
+      "temp": "85°C"
+    },
+    "assets": ["assets/images/BT014-chrysanthemum.png"]
+  },
+  {
+    "teaId": "BT015",
+    "name": "복숭아 티",
+    "nameEn": "Peach Tea",
+    "timeTag": ["Afternoon"],
+    "energyTag": ["Heart", "외향", "활동형"],
+    "mbtiMatch": ["ENFP", "ESFP"],
+    "tasteNote": ["달콤함", "과일향", "상큼"],
+    "caffeine": "없음",
+    "copy": "다양한 친구들과 두루두루 친한 편, 새 친구도 쉽게 사귀는 티.",
+    "description": "달콤한 복숭아 향으로 즐거운 오후를 만들다.",
+    "brewingGuide": {
+      "teaBag": "1개",
+      "water": "300ml 이상",
+      "time": "5분",
+      "temp": "90°C"
+    },
+    "assets": ["assets/images/BT015-peach.png"]
+  }
+]
+
