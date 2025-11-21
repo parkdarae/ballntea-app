@@ -2,8 +2,6 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import questionsData from "@/data/questions.json";
-import teasData from "@/data/teas.json";
 import { QuestionCard } from "@/components/test/QuestionCard";
 import { ProgressMeter } from "@/components/test/ProgressMeter";
 import { ResultSummary } from "@/components/test/ResultSummary";
@@ -17,6 +15,8 @@ import {
 } from "@/types";
 import { calculateResult } from "@/modules/scoring";
 import { pickEnergyTeas, pickSignatureTea } from "@/modules/recommendation";
+import questionsData from "@/data/questions.json" assert { type: "json" };
+import teasData from "@/data/teas.json" assert { type: "json" };
 
 const STORAGE_KEY = "ballantea-progress";
 const GUIDE_KEY = "ballantea-format-guide";
@@ -27,8 +27,8 @@ type StoredProgress = {
   timestamp: string;
 };
 
-const questions = questionsData as Question[];
-const teas = teasData as Tea[];
+const questions = questionsData as unknown as Question[];
+const teas = teasData as unknown as Tea[];
 
 export default function TestPage() {
   const total = questions.length;

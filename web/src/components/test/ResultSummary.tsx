@@ -1,6 +1,7 @@
 import { ResultPayload, Tea } from "@/types";
 import { MBTI_DESCRIPTIONS } from "@/data/mbti-descriptions";
 import { ENERGY_DESCRIPTIONS, CENTER_DESCRIPTIONS } from "@/data/energy-descriptions";
+import { MBTI_JUST_FOR_TODAY } from "@/data/mbti-just-for-today";
 
 interface ResultSummaryProps {
   result: ResultPayload;
@@ -17,6 +18,7 @@ export const ResultSummary = ({
   const orientationDesc = ENERGY_DESCRIPTIONS[result.energyProfile.orientation];
   const activityDesc = ENERGY_DESCRIPTIONS[result.energyProfile.activity];
   const centerDesc = CENTER_DESCRIPTIONS[result.energyProfile.center];
+  const justForToday = MBTI_JUST_FOR_TODAY[result.mbtiType];
 
   return (
     <section className="retro-card flex flex-col gap-8 p-8">
@@ -66,6 +68,24 @@ export const ResultSummary = ({
         </section>
       )}
 
+      <section className="grid gap-4 lg:grid-cols-3">
+        {signatureTea && (
+          <TeaCard
+            tea={signatureTea}
+            badge="시그니처 티"
+            highlight="MBTI 시그니처 매칭"
+          />
+        )}
+        {energyTeas.map((tea, index) => (
+          <TeaCard
+            key={tea.teaId}
+            tea={tea}
+            badge={`${index === 0 ? "AM" : "PM"} 루틴`}
+            highlight="에너지 루틴 추천"
+          />
+        ))}
+      </section>
+
       <section className="grid gap-4 md:grid-cols-2">
         {result.axes.map((axis) => (
           <AxisCard key={axis.axis} axis={axis} />
@@ -74,26 +94,32 @@ export const ResultSummary = ({
 
       <section className="grid gap-4 md:grid-cols-3">
         <QuickBadge
-          label="Orientation"
+          label="외향/내향"
           value={result.energyProfile.orientation}
           detail={`외향 ${result.energyProfile.raw.orientation["외향"]} vs 내향 ${result.energyProfile.raw.orientation["내향"]}`}
         />
         <QuickBadge
-          label="Activity"
+          label="활동/정적"
           value={result.energyProfile.activity}
           detail={`활동 ${result.energyProfile.raw.activity["활동형"]} · 정적 ${result.energyProfile.raw.activity["정적형"]}`}
         />
         <QuickBadge
-          label="Center"
-          value={result.energyProfile.center}
-          detail={`Head ${result.energyProfile.raw.center.Head} · Heart ${result.energyProfile.raw.center.Heart} · Gut ${result.energyProfile.raw.center.Gut}`}
+          label="센터"
+          value={result.energyProfile.center === "Head" ? "사고중심" : result.energyProfile.center === "Heart" ? "감성중심" : "본능중심"}
+          detail={`사고 ${result.energyProfile.raw.center.Head} · 감성 ${result.energyProfile.raw.center.Heart} · 본능 ${result.energyProfile.raw.center.Gut}`}
         />
       </section>
 
       <section className="space-y-4">
-        <h3 className="text-sm uppercase tracking-[0.4em] text-slate">
-          🌈 에너지 방향성
-        </h3>
+        <div>
+          <h3 className="text-sm uppercase tracking-[0.4em] text-slate">
+            🌈 에너지 방향성
+          </h3>
+          <p className="mt-2 text-base leading-relaxed text-ink">
+            당신의 에너지 흐름에 맞춘 볼앤티 한 잔이 하루의 리듬을 정확하게 세팅해 줘요. 
+            지금 필요한 집중, 안정, 활력을 티 한 모금으로 깨워보세요.
+          </p>
+        </div>
         <div className="grid gap-4 md:grid-cols-2">
           {orientationDesc && (
             <EnergyCard
@@ -125,29 +151,8 @@ export const ResultSummary = ({
           Just for Today
         </p>
         <p className="mt-2 text-lg leading-relaxed">
-          오늘은 {result.timePreference.label} 루틴에 맞춰{" "}
-          {result.energyProfile.center} 센터 감각을 활성화하세요. 질문 카드에서
-          떠올랐던 핵심 목표를 한 줄로 정리하고, 추천 티 한 잔과 함께 실행
-          스위치를 올립니다.
+          {justForToday || `오늘은 ${result.timePreference.label} 루틴에 맞춰 ${result.energyProfile.center} 센터 감각을 활성화하세요.`}
         </p>
-      </section>
-
-      <section className="grid gap-4 lg:grid-cols-3">
-        {signatureTea && (
-          <TeaCard
-            tea={signatureTea}
-            badge="시그니처 티"
-            highlight="MBTI 시그니처 매칭"
-          />
-        )}
-        {energyTeas.map((tea, index) => (
-          <TeaCard
-            key={tea.teaId}
-            tea={tea}
-            badge={`${index === 0 ? "AM" : "PM"} 루틴`}
-            highlight="에너지 루틴 추천"
-          />
-        ))}
       </section>
     </section>
   );

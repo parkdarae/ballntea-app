@@ -2,10 +2,10 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import teasData from "@/data/teas.json";
 import { Tea } from "@/types";
+import teasData from "@/data/teas.json" assert { type: "json" };
 
-const teas = teasData as Tea[];
+const teas = teasData as unknown as Tea[];
 
 const energyPriority = [
   "Head",

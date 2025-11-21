@@ -1,10 +1,10 @@
 import Link from "next/link";
-import questionsData from "@/data/questions.json";
-import teasData from "@/data/teas.json";
 import { Question, Tea } from "@/types";
+import questionsData from "@/data/questions.json" assert { type: "json" };
+import teasData from "@/data/teas.json" assert { type: "json" };
 
-const questions = questionsData as Question[];
-const teas = teasData as Tea[];
+const questions = questionsData as unknown as Question[];
+const teas = teasData as unknown as Tea[];
 
 const heroStats = [
   { label: "총 문항", value: `${questions.length} Q`, sub: "MBTI 8 · 에너지 4 · 시간 1" },
@@ -119,7 +119,7 @@ export default function Home() {
           </ul>
           <p className="mt-6 text-sm text-slate">
             * PDF가 스캔본일 경우 OCR 품질을 검증하고, 이미지 캡처는
-            `assets/images/{datasetId}-{문제번호}-{순번}.png` 규칙으로 저장해야 합니다.
+            assets/images/&#123;datasetId&#125;-&#123;문제번호&#125;-&#123;순번&#125;.png 규칙으로 저장해야 합니다.
           </p>
         </div>
       </section>
